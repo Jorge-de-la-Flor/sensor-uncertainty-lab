@@ -8,7 +8,7 @@ filter and prints both the raw measurements and the corresponding filtered
 estimates to the console.
 """
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 class KalmanFilter1D:
     """
@@ -40,6 +40,7 @@ def simulate():
     Kalman filter over them, and return both the measurements and the
     filtered estimates.
     """
+    np.random.seed(42)
     
     true_value = 5
     measurements = true_value + np.random.normal(0, 1, 50)
@@ -62,3 +63,10 @@ if __name__ == "__main__":
 
     for m, e in zip(measurements, estimates):
         print(f"measurement={m:.2f} estimate={e:.2f}")
+    
+    plt.plot(measurements, label="Measurements", alpha=0.6)
+    plt.plot(estimates, label="Kalman estimate")
+
+    plt.legend()
+    plt.title("Kalman Filter Estimation")
+    plt.savefig("kalman_estimate.png")

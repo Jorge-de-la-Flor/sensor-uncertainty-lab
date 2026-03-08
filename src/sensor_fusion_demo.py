@@ -42,6 +42,8 @@ def main():
     Run a demonstration: generate the true signal, simulate two noisy
     sensors, fuse their readings, and print the first few samples.
     """
+    np.random.seed(42)
+
     true_signal = generate_signal()
 
     sensor1 = noisy_sensor(true_signal, 0.3)

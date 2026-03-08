@@ -38,6 +38,8 @@ def main():
     Orchestrate signal generation, noise simulation, and plotting, and save
     the resulting figure to disk.
     """
+    np.random.seed(42)
+
     t, true_signal = generate_true_signal()
     measurement = simulate_sensor(true_signal)
 
