@@ -49,7 +49,7 @@ def main():
     plt.legend()
     plt.title("Sensor Noise Simulation")
     # plt.show()  # In WSL we don't have UI
-    plt.savefig("sensor_noise.png")
+    plt.savefig("../assets/sensor_noise.png")
 
 
 if __name__ == "__main__":

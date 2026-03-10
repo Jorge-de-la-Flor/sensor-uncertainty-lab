@@ -17,7 +17,7 @@ class KalmanFilter1D:
     """
     
     def __init__(self, process_var, measurement_var):
-        self.x = 0
+        self.x = 0.0
         self.P = 1
         self.Q = process_var
         self.R = measurement_var
@@ -71,4 +71,4 @@ if __name__ == "__main__":
     
     plt.legend()
     plt.title("Kalman Filter Estimation")
-    plt.savefig("kalman_estimate.png")
+    plt.savefig("../assets/kalman_estimate.png")

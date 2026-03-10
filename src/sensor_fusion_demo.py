@@ -6,6 +6,8 @@ independent noisy sensors with different noise levels, and fuses their
 measurements by averaging. It then prints a few sample triplets of
 (sensor1, sensor2, fused) values to illustrate how combining multiple noisy
 measurements can reduce overall noise.
+
+This simplified fusion assumes equal sensor reliability.
 """
 import numpy as np
 
